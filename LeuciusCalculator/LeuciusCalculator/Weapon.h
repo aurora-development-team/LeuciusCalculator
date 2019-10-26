@@ -1,6 +1,13 @@
 #pragma once
 #include<string>
 #include <iostream>
+
+typedef struct printdamage {
+	
+	int total;
+	std::string type;
+}printdano;
+
 typedef struct damage {
 
 	int nDice;

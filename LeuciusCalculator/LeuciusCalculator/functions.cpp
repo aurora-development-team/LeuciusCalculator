@@ -33,6 +33,7 @@ int readFile(std::string fileName, std::vector <Weapon> *list)
 
 
 	}
+	return 1;
 }
 
 int decodeDice(std::string dice)
@@ -108,7 +109,28 @@ void buildWeapon()
 	bonus.erase(0, 1);
 	test->setBonus(stoi(bonus));
 
-	std::cout << test->getName() << std::endl;
-	test->printDanos();
-	std::cout << test->getBonus() << std::endl;
+	//std::cout << test->getName() << std::endl;
+//	test->printDanos();
+	//std::cout << test->getBonus() << std::endl;
+}
+void findDamageType(std::vector <printdano> &d, std::string type, int val)
+{
+	bool found = false;
+	printdano partial;
+	for (int i = 0; i < d.size(); i++)
+	{
+		if (d[i].type == type)
+		{
+			d[i].total += val;
+			found = true;
+			break;
+		}
+	}
+	if (found == false)
+	{
+		found = true;
+		partial.total = val;
+		partial.type = type;
+		d.push_back(partial);
+	}
 }

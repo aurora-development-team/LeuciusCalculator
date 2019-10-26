@@ -1,6 +1,4 @@
 ﻿  Main.cpp
-F:\Projetos VC\LeuciusCalculator\LeuciusCalculator\Main.cpp(48): warning C4244: 'argumento': conversão de 'time_t' para 'unsigned int', possível perda de dados
-F:\Projetos VC\LeuciusCalculator\LeuciusCalculator\Main.cpp(94): warning C4552: '+': o resultado da expressão não é usado
-  Weapon.cpp
-  Gerando Código...
+F:\Projetos VC\LeuciusCalculator\LeuciusCalculator\Main.cpp(54): warning C4244: 'argumento': conversão de 'time_t' para 'unsigned int', possível perda de dados
+F:\Projetos VC\LeuciusCalculator\LeuciusCalculator\Main.cpp(126): warning C4018: '<': incompatibilidade de signed/unsigned
   LeuciusCalculator.vcxproj -> F:\Projetos VC\LeuciusCalculator\Debug\LeuciusCalculator.exe
