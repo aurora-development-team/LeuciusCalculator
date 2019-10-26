@@ -1,0 +1,4 @@
+fist;1d1 bludgeoning;+0
+greatsword;2d6 slashing;+0
+poison dagger;1d4 slashing+1d10 poison;+1
+angelic lance;1d10 slashing+1d8 radiant;+2
