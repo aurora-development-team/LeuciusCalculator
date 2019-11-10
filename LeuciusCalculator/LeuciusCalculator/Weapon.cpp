@@ -39,11 +39,16 @@ std::string Weapon::getName()
 }
 void Weapon::printDanos()
 {
+	std::string aux = "";
 	for (int i = 0; i < dSize; i++)
 	{
-		std::cout << D[i].nDice <<D [i].dice << " " << D[i].type << "=========" ;
+		aux = aux + std::to_string(D[i].nDice) + "d" + std::to_string(D[i].dice) + " " + D[i].type;
+	//	std::cout << D[i].nDice << "d"<< D [i].dice << " " << D[i].type;
+		if (i != dSize - 1)
+			//std::cout << "+" ;
+			aux = aux + "+";
 	}
-	std::cout << std::endl;
+	std::cout << std::left << std::setw(30) <<aux;
 }
 dano Weapon::getDano(int pos)
 {

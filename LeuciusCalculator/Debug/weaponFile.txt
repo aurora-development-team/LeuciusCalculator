@@ -3,6 +3,3 @@ Greatsword;2d6 slashing;+0
 Poison Dagger;1d4 slashing+1d10 poison;+1
 Angelic Lance;1d10 slashing+1d8 radiant;+2
 Fume Greatsword;6d6 slashing;+5
-longsword;1d8 slashing;+1
-shortsword;1d6 slashing;+0
-test weapon;1d4 piercing+2d8 necrotic+4d12 force;+5
