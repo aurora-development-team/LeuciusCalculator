@@ -159,7 +159,7 @@ void config(int &monsterAC, int &arma, int &nAtk, int &atkRoll, int &atkDmg)
 	std::cin >> atkDmg;
 	std::cout << std::endl;
 }
-void calculate(int nAtk, int  atkRoll, std::vector <Weapon> &weaponList, int arma, int atkDmg, int monsterAC)
+std::string calculate(int nAtk, int  atkRoll, std::vector <Weapon> &weaponList, int arma, int atkDmg, int monsterAC)
 {
 
 	int timesAttacked = 1;
@@ -167,25 +167,29 @@ void calculate(int nAtk, int  atkRoll, std::vector <Weapon> &weaponList, int arm
 	int atk;
 	int damage = 0;
 	int hits = 0;
+    char retC[500], retB[50];
+    int nCrits = 0;
 	std::vector <printdano> danos;
+    sprintf(retC,"");
 	while (timesAttacked <= nAtk) {
 
-		diceRoll = d20;
+        diceRoll = d20;
 		if (diceRoll == 1)
 		{
-			std::cout << "Crit fail at " << timesAttacked << " attacks" << std::endl << std::endl;
+            sprintf(retB,"Crit Fail at %d attacks\n", timesAttacked);
+            strcat(retC,retB);
 			break;
 		}
 		atk = diceRoll + atkRoll;
 		if (diceRoll == 20)
 		{
-			std::cout << "CRIT" << std::endl << std::endl;
 
-			//	damage = damage + 24 + 16 + 36 + 24 + atkDmg + 4 *((rand() % 6) + 1) + 2 * ((rand() % 8) + 1) + 6 * ((rand() % 6) + 1) + 3 * ((rand() % 8) + 1);
+
+            nCrits++;
 			for (int i = 0; i < weaponList[arma].getDSize(); i++)
 			{
 				int partial = weaponList[arma].getDano(i).nDice * weaponList[arma].getDano(i).dice;
-				//	std::cout << partial << " " << weaponList[arma].getDano(i).type << " damage" << std::endl;
+
 				findDamageType(danos, weaponList[arma].getDano(i).type, partial);
 				damage = damage + partial;
 			}
@@ -196,14 +200,12 @@ void calculate(int nAtk, int  atkRoll, std::vector <Weapon> &weaponList, int arm
 		}
 		else if (atk > monsterAC)
 		{
-			//damage = damage + 4 * ((rand() % 6) + 1) + 2 * ((rand() % 8) + 1) + 6 * ((rand() % 6) + 1);  + 3 * ((rand() % 8) + 1)  + atkDmg;
 			for (int i = 0; i < weaponList[arma].getDSize(); i++)
 			{
 
 				for (int j = 0; j < weaponList[arma].getDano(i).nDice; j++)
 				{
 					int partial = ((rand() % weaponList[arma].getDano(i).dice) + 1);
-					//std::cout << partial << " " << weaponList[arma].getDano(i).type << " damage" << std::endl;
 					findDamageType(danos, weaponList[arma].getDano(i).type, partial);
 					damage = damage + partial;
 				}
@@ -214,13 +216,21 @@ void calculate(int nAtk, int  atkRoll, std::vector <Weapon> &weaponList, int arm
 		}
 		timesAttacked++;
 	}
-	std::cout << "Nro Ataques acertados: " << hits << std::endl << std::endl;
-	std::cout << "Dano: " << damage << std::endl << std::endl;
+    sprintf(retB,"%d CRITS\n",nCrits);
+    strcat(retC,retB);
+    sprintf(retB,"Nro Ataques Acertados: %d\nDano: %d\n",hits,damage);
+    strcat(retC,retB );
+
 	for (int i = 0; i < danos.size(); i++)
 	{
-		std::cout << danos[i].total << " " << danos[i].type << " damage" << std::endl;
-	}
-	std::cin.ignore();
+
+        sprintf(retB, "%d %s damage\n", danos[i].total,danos[i].type.c_str());
+        strcat(retC, retB);
+
+    }
+        std::string ret(retC);
+     //   std::cout << ret << std::endl;
+        return ret;
 }
 int addWeapon(std::string fileName)
 {

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1599</width>
-    <height>939</height>
+    <width>900</width>
+    <height>1200</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,10 +17,10 @@
    <widget class="QPushButton" name="Calcular">
     <property name="geometry">
      <rect>
-      <x>710</x>
-      <y>710</y>
-      <width>221</width>
-      <height>61</height>
+      <x>70</x>
+      <y>550</y>
+      <width>371</width>
+      <height>121</height>
      </rect>
     </property>
     <property name="palette">
@@ -171,7 +171,7 @@
     <property name="font">
      <font>
       <family>High Tower Text</family>
-      <pointsize>14</pointsize>
+      <pointsize>26</pointsize>
      </font>
     </property>
     <property name="cursor">
@@ -184,8 +184,8 @@
    <widget class="QComboBox" name="weaponBox">
     <property name="geometry">
      <rect>
-      <x>140</x>
-      <y>400</y>
+      <x>80</x>
+      <y>20</y>
       <width>221</width>
       <height>21</height>
      </rect>
@@ -194,8 +194,8 @@
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>70</x>
-      <y>390</y>
+      <x>10</x>
+      <y>10</y>
       <width>71</width>
       <height>31</height>
      </rect>
@@ -213,8 +213,8 @@
    <widget class="QLabel" name="damage">
     <property name="geometry">
      <rect>
-      <x>170</x>
-      <y>460</y>
+      <x>10</x>
+      <y>80</y>
       <width>131</width>
       <height>61</height>
      </rect>
@@ -233,8 +233,8 @@
    <widget class="QLabel" name="bonus">
     <property name="geometry">
      <rect>
-      <x>180</x>
-      <y>540</y>
+      <x>20</x>
+      <y>160</y>
       <width>91</width>
       <height>61</height>
      </rect>
@@ -253,8 +253,8 @@
    <widget class="QLabel" name="dmgVal">
     <property name="geometry">
      <rect>
-      <x>290</x>
-      <y>460</y>
+      <x>130</x>
+      <y>80</y>
       <width>1291</width>
       <height>61</height>
      </rect>
@@ -273,8 +273,8 @@
    <widget class="QLabel" name="bonVal">
     <property name="geometry">
      <rect>
-      <x>290</x>
-      <y>540</y>
+      <x>130</x>
+      <y>160</y>
       <width>211</width>
       <height>61</height>
      </rect>
@@ -290,13 +290,167 @@
      <string/>
     </property>
    </widget>
+   <widget class="QSpinBox" name="enemyACVal">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>430</y>
+      <width>61</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>High Tower Text</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+   </widget>
+   <widget class="QLabel" name="enemyAC">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>420</y>
+      <width>101</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>High Tower Text</family>
+      <pointsize>16</pointsize>
+      <italic>true</italic>
+     </font>
+    </property>
+    <property name="text">
+     <string>Enemy AC:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="proficiency">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>300</y>
+      <width>121</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>High Tower Text</family>
+      <pointsize>16</pointsize>
+      <italic>true</italic>
+     </font>
+    </property>
+    <property name="text">
+     <string>Proficiency:</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="profVal">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>310</y>
+      <width>61</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>High Tower Text</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+   </widget>
+   <widget class="QLabel" name="statMod">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>360</y>
+      <width>121</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>High Tower Text</family>
+      <pointsize>16</pointsize>
+      <italic>true</italic>
+     </font>
+    </property>
+    <property name="text">
+     <string>Stat Modifier:</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="statVal">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>370</y>
+      <width>61</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>High Tower Text</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+   </widget>
+   <widget class="QLabel" name="numberAtk">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>240</y>
+      <width>171</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>High Tower Text</family>
+      <pointsize>16</pointsize>
+      <italic>true</italic>
+     </font>
+    </property>
+    <property name="text">
+     <string>Number of Attacks:</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="numAtkVal">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>250</y>
+      <width>61</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>High Tower Text</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="output">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>270</y>
+      <width>441</width>
+      <height>241</height>
+     </rect>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1599</width>
+     <width>900</width>
      <height>21</height>
     </rect>
    </property>

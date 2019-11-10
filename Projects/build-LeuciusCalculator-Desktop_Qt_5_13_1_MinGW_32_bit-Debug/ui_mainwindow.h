@@ -16,7 +16,9 @@
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QSpinBox>
 #include <QtWidgets/QStatusBar>
+#include <QtWidgets/QTextEdit>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -32,6 +34,15 @@ public:
     QLabel *bonus;
     QLabel *dmgVal;
     QLabel *bonVal;
+    QSpinBox *enemyACVal;
+    QLabel *enemyAC;
+    QLabel *proficiency;
+    QSpinBox *profVal;
+    QLabel *statMod;
+    QSpinBox *statVal;
+    QLabel *numberAtk;
+    QSpinBox *numAtkVal;
+    QTextEdit *output;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -39,12 +50,12 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(1599, 939);
+        MainWindow->resize(900, 1600);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         Calcular = new QPushButton(centralwidget);
         Calcular->setObjectName(QString::fromUtf8("Calcular"));
-        Calcular->setGeometry(QRect(710, 710, 221, 61));
+        Calcular->setGeometry(QRect(70, 550, 371, 121));
         QPalette palette;
         QBrush brush(QColor(170, 255, 255, 255));
         brush.setStyle(Qt::SolidPattern);
@@ -74,22 +85,22 @@ public:
         Calcular->setPalette(palette);
         QFont font;
         font.setFamily(QString::fromUtf8("High Tower Text"));
-        font.setPointSize(14);
+        font.setPointSize(26);
         Calcular->setFont(font);
         Calcular->setCursor(QCursor(Qt::OpenHandCursor));
         weaponBox = new QComboBox(centralwidget);
         weaponBox->setObjectName(QString::fromUtf8("weaponBox"));
-        weaponBox->setGeometry(QRect(140, 400, 221, 21));
+        weaponBox->setGeometry(QRect(80, 20, 221, 21));
         label = new QLabel(centralwidget);
         label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(70, 390, 71, 31));
+        label->setGeometry(QRect(10, 10, 71, 31));
         QFont font1;
         font1.setFamily(QString::fromUtf8("High Tower Text"));
         font1.setPointSize(12);
         label->setFont(font1);
         damage = new QLabel(centralwidget);
         damage->setObjectName(QString::fromUtf8("damage"));
-        damage->setGeometry(QRect(170, 460, 131, 61));
+        damage->setGeometry(QRect(10, 80, 131, 61));
         QFont font2;
         font2.setFamily(QString::fromUtf8("High Tower Text"));
         font2.setPointSize(24);
@@ -97,20 +108,62 @@ public:
         damage->setFont(font2);
         bonus = new QLabel(centralwidget);
         bonus->setObjectName(QString::fromUtf8("bonus"));
-        bonus->setGeometry(QRect(180, 540, 91, 61));
+        bonus->setGeometry(QRect(20, 160, 91, 61));
         bonus->setFont(font2);
         dmgVal = new QLabel(centralwidget);
         dmgVal->setObjectName(QString::fromUtf8("dmgVal"));
-        dmgVal->setGeometry(QRect(290, 460, 1291, 61));
+        dmgVal->setGeometry(QRect(130, 80, 1291, 61));
         dmgVal->setFont(font2);
         bonVal = new QLabel(centralwidget);
         bonVal->setObjectName(QString::fromUtf8("bonVal"));
-        bonVal->setGeometry(QRect(290, 540, 211, 61));
+        bonVal->setGeometry(QRect(130, 160, 211, 61));
         bonVal->setFont(font2);
+        enemyACVal = new QSpinBox(centralwidget);
+        enemyACVal->setObjectName(QString::fromUtf8("enemyACVal"));
+        enemyACVal->setGeometry(QRect(180, 430, 61, 41));
+        QFont font3;
+        font3.setFamily(QString::fromUtf8("High Tower Text"));
+        font3.setPointSize(16);
+        enemyACVal->setFont(font3);
+        enemyAC = new QLabel(centralwidget);
+        enemyAC->setObjectName(QString::fromUtf8("enemyAC"));
+        enemyAC->setGeometry(QRect(80, 420, 101, 61));
+        QFont font4;
+        font4.setFamily(QString::fromUtf8("High Tower Text"));
+        font4.setPointSize(16);
+        font4.setItalic(true);
+        enemyAC->setFont(font4);
+        proficiency = new QLabel(centralwidget);
+        proficiency->setObjectName(QString::fromUtf8("proficiency"));
+        proficiency->setGeometry(QRect(80, 300, 121, 61));
+        proficiency->setFont(font4);
+        profVal = new QSpinBox(centralwidget);
+        profVal->setObjectName(QString::fromUtf8("profVal"));
+        profVal->setGeometry(QRect(180, 310, 61, 41));
+        profVal->setFont(font3);
+        statMod = new QLabel(centralwidget);
+        statMod->setObjectName(QString::fromUtf8("statMod"));
+        statMod->setGeometry(QRect(60, 360, 121, 61));
+        statMod->setFont(font4);
+        statVal = new QSpinBox(centralwidget);
+        statVal->setObjectName(QString::fromUtf8("statVal"));
+        statVal->setGeometry(QRect(180, 370, 61, 41));
+        statVal->setFont(font3);
+        numberAtk = new QLabel(centralwidget);
+        numberAtk->setObjectName(QString::fromUtf8("numberAtk"));
+        numberAtk->setGeometry(QRect(20, 240, 171, 61));
+        numberAtk->setFont(font4);
+        numAtkVal = new QSpinBox(centralwidget);
+        numAtkVal->setObjectName(QString::fromUtf8("numAtkVal"));
+        numAtkVal->setGeometry(QRect(180, 250, 61, 41));
+        numAtkVal->setFont(font3);
+        output = new QTextEdit(centralwidget);
+        output->setObjectName(QString::fromUtf8("output"));
+        output->setGeometry(QRect(270, 270, 441, 241));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 1599, 21));
+        menubar->setGeometry(QRect(0, 0, 900, 21));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
@@ -130,6 +183,10 @@ public:
         bonus->setText(QCoreApplication::translate("MainWindow", "Bonus:", nullptr));
         dmgVal->setText(QString());
         bonVal->setText(QString());
+        enemyAC->setText(QCoreApplication::translate("MainWindow", "Enemy AC:", nullptr));
+        proficiency->setText(QCoreApplication::translate("MainWindow", "Proficiency:", nullptr));
+        statMod->setText(QCoreApplication::translate("MainWindow", "Stat Modifier:", nullptr));
+        numberAtk->setText(QCoreApplication::translate("MainWindow", "Number of Attacks:", nullptr));
     } // retranslateUi
 
 };

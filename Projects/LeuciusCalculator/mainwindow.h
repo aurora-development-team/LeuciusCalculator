@@ -4,7 +4,7 @@
 #include <QMainWindow>
 #include "Weapon.h"
 #include "functions.h"
-
+#include <ctime>
 
 
 
@@ -25,6 +25,16 @@ private slots:
 
 
     void on_weaponBox_activated(int index);
+
+
+    void on_enemyACVal_valueChanged(int arg1);
+
+
+    void on_profVal_valueChanged(int arg1);
+
+    void on_statVal_valueChanged(int arg1);
+
+    void on_numAtkVal_valueChanged(int arg1);
 
 private:
     Ui::MainWindow *ui;

@@ -6,12 +6,16 @@ int atkRoll = 0;
 int atkDmg = 0;
 int arma;
 char menu = 0;
+
+int profBonus = 0;
+int statMod = 0;
 std::vector <Weapon> weaponList;
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
+    srand(time(NULL));
     readFile("weaponFile.txt", &weaponList);
 
     ui->setupUi(this);
@@ -29,7 +33,10 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_Calcular_clicked()
 {
-    calculate(nAtk, atkRoll, weaponList, arma, atkDmg, monsterAC);
+    atkRoll = statMod + profBonus + weaponList[arma].getBonus();
+    atkDmg = statMod + weaponList[arma].getBonus();
+   ui->output->setText( QString::fromStdString(calculate(nAtk, atkRoll, weaponList, arma, atkDmg, monsterAC)));
+ //   calculate(nAtk, atkRoll, weaponList, arma, atkDmg, monsterAC);
 }
 
 void MainWindow::on_weaponBox_activated(int index)
@@ -37,6 +44,29 @@ void MainWindow::on_weaponBox_activated(int index)
     arma = index;
     ui->bonVal->setText(QString::number(weaponList[index].getBonus()));
     ui->dmgVal->setText(QString::fromStdString(weaponList[index].printDanos()));
-    atkDmg += weaponList[index].getBonus();
-    atkRoll += weaponList[index].getBonus();
+  //  atkDmg += weaponList[index].getBonus();
+   // atkRoll += weaponList[index].getBonus();
+}
+
+
+
+void MainWindow::on_enemyACVal_valueChanged(int arg1)
+{
+    monsterAC = arg1;
+}
+
+
+void MainWindow::on_profVal_valueChanged(int arg1)
+{
+   profBonus = arg1;
+}
+
+void MainWindow::on_statVal_valueChanged(int arg1)
+{
+    statMod = arg1;
+}
+
+void MainWindow::on_numAtkVal_valueChanged(int arg1)
+{
+    nAtk = arg1;
 }
