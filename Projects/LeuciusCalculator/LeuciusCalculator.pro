@@ -19,15 +19,18 @@ SOURCES += \
     Weapon.cpp \
     functions.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    wepsetup.cpp
 
 HEADERS += \
     Weapon.h \
     functions.h \
-    mainwindow.h
+    mainwindow.h \
+    wepsetup.h
 
 FORMS += \
-    mainwindow.ui
+    mainwindow.ui \
+    wepsetup.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

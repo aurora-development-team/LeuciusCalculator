@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include "Weapon.h"
 #include "functions.h"
+#include "wepsetup.h"
 #include <ctime>
 
 
@@ -35,6 +36,8 @@ private slots:
     void on_statVal_valueChanged(int arg1);
 
     void on_numAtkVal_valueChanged(int arg1);
+
+    void on_newWep_clicked();
 
 private:
     Ui::MainWindow *ui;

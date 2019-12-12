@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>wepSetup</class>
+ <widget class="QWidget" name="wepSetup">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>480</width>
+    <height>640</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>10</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QComboBox" name="dice">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>140</y>
+     <width>71</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>1</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>d4</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>d6</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>d8</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>d10</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>d12</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>d20</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QTextBrowser" name="fOut">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>250</y>
+     <width>401</width>
+     <height>192</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="times">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>150</y>
+     <width>16</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>*</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="ndice">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>140</y>
+     <width>31</width>
+     <height>31</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="addDamage">
+   <property name="geometry">
+    <rect>
+     <x>380</x>
+     <y>140</y>
+     <width>91</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>add damage</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="damage">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>140</y>
+     <width>121</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>slashing</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>piercing</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>bludgeoning</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>force</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>cold</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>fire</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>necrotic</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>radiant</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>psychic</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>lightning</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>thunder</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>acid</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>poison</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QLineEdit" name="wepName">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>70</y>
+     <width>381</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>70</y>
+     <width>71</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>name:</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="confirm">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>520</y>
+     <width>151</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>confirm</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="cancel">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>520</y>
+     <width>151</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>cancel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>100</y>
+     <width>71</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Bonus:</string>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="bonus">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>100</y>
+     <width>42</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

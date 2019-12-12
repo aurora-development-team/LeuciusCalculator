@@ -36,7 +36,6 @@ void MainWindow::on_Calcular_clicked()
     atkRoll = statMod + profBonus + weaponList[arma].getBonus();
     atkDmg = statMod + weaponList[arma].getBonus();
    ui->output->setText( QString::fromStdString(calculate(nAtk, atkRoll, weaponList, arma, atkDmg, monsterAC)));
- //   calculate(nAtk, atkRoll, weaponList, arma, atkDmg, monsterAC);
 }
 
 void MainWindow::on_weaponBox_activated(int index)
@@ -44,8 +43,6 @@ void MainWindow::on_weaponBox_activated(int index)
     arma = index;
     ui->bonVal->setText(QString::number(weaponList[index].getBonus()));
     ui->dmgVal->setText(QString::fromStdString(weaponList[index].printDanos()));
-  //  atkDmg += weaponList[index].getBonus();
-   // atkRoll += weaponList[index].getBonus();
 }
 
 
@@ -69,4 +66,11 @@ void MainWindow::on_statVal_valueChanged(int arg1)
 void MainWindow::on_numAtkVal_valueChanged(int arg1)
 {
     nAtk = arg1;
+}
+
+void MainWindow::on_newWep_clicked()
+{
+    wepSetup *set = new wepSetup;
+    set->setAttribute(Qt::WA_DeleteOnClose);
+    set->show();
 }
