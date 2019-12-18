@@ -24,6 +24,8 @@ private slots:
 
     void on_bonus_valueChanged(int arg1);
 
+    void on_confirm_clicked();
+
 private:
     Ui::wepSetup *ui;
 };

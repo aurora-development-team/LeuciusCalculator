@@ -20,16 +20,19 @@ SOURCES += \
     functions.cpp \
     main.cpp \
     mainwindow.cpp \
+    wepedit.cpp \
     wepsetup.cpp
 
 HEADERS += \
     Weapon.h \
     functions.h \
     mainwindow.h \
+    wepedit.h \
     wepsetup.h
 
 FORMS += \
     mainwindow.ui \
+    wepedit.ui \
     wepsetup.ui
 
 # Default rules for deployment.

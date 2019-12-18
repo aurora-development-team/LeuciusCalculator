@@ -6,3 +6,6 @@ Fume Greatsword;6d6 slashing;+5
 longsword;1d8 slashing;+1
 shortsword;1d6 slashing;+0
 test weapon;1d4 piercing+2d8 necrotic+4d12 force;+5
+teste1;1d4 radiant;+2
+teste2;2d6 slashing+2d4 cold;+1
+teste3;1d10 psychic;+2

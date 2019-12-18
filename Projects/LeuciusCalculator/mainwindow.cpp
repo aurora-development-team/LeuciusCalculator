@@ -9,20 +9,23 @@ char menu = 0;
 
 int profBonus = 0;
 int statMod = 0;
+std::string fileName = "weaponFile.txt";
 std::vector <Weapon> weaponList;
+bool isOK;
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
     srand(time(NULL));
-    readFile("weaponFile.txt", &weaponList);
+    readFile(fileName, &weaponList);
 
     ui->setupUi(this);
     for(int i = 0;i < weaponList.size();i++)
     {
         ui->weaponBox->addItem(QString::fromStdString(weaponList[i].getName()));
     }
+    ui->weaponBox->setCurrentIndex(-1);
 }
 
 MainWindow::~MainWindow()
@@ -40,6 +43,7 @@ void MainWindow::on_Calcular_clicked()
 
 void MainWindow::on_weaponBox_activated(int index)
 {
+
     arma = index;
     ui->bonVal->setText(QString::number(weaponList[index].getBonus()));
     ui->dmgVal->setText(QString::fromStdString(weaponList[index].printDanos()));
@@ -73,4 +77,29 @@ void MainWindow::on_newWep_clicked()
     wepSetup *set = new wepSetup;
     set->setAttribute(Qt::WA_DeleteOnClose);
     set->show();
+    isOK = false;
+
+}
+
+
+
+void MainWindow::on_weaponBox_highlighted(int index)
+{
+    if(isOK == false)
+    {
+        for(int i = 0;i < weaponList.size();i++)
+        {
+            if(ui->weaponBox->findText(QString::fromStdString(weaponList[i].getName())) == -1)
+                ui->weaponBox->addItem(QString::fromStdString(weaponList[i].getName()));
+        }
+        isOK = true;
+    }
+}
+
+void MainWindow::on_editWep_clicked()
+{
+    wepEdit *set = new wepEdit;
+    set->setAttribute(Qt::WA_DeleteOnClose);
+    set->show();
+    isOK = false;
 }

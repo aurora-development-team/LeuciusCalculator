@@ -58,3 +58,25 @@ int Weapon::getDSize()
 {
 	return dSize;
 }
+void Weapon::removeDano(int d)
+{
+    if(d == (dSize - 1) && dSize != 1)
+        dSize = dSize - 1;
+    else
+    {
+        for(int i = 0;i < dSize-1;i++)
+        {
+            if(i >= d)
+            {
+                D[i] = D[i+1];
+            }
+        }
+        dSize = dSize - 1;
+    }
+}
+ void Weapon::editDano(int d,int n, int dd, std::string t)
+{
+    D[d].nDice = n;
+    D[d].dice = dd;
+    D[d].type = t;
+}

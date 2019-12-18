@@ -25,6 +25,8 @@ public:
 	Weapon();
 	Weapon(dano d, int b, std::string s);
 	void addDano(dano d);
+    void removeDano(int d);
+    void editDano(int d,int n, int dd, std::string t);
 	void setBonus(int n);
 	int getBonus();
 	void setName(std::string nome);

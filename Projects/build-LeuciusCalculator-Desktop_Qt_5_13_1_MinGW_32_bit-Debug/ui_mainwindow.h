@@ -44,6 +44,7 @@ public:
     QSpinBox *numAtkVal;
     QTextEdit *output;
     QPushButton *newWep;
+    QPushButton *editWep;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -165,6 +166,10 @@ public:
         newWep->setObjectName(QString::fromUtf8("newWep"));
         newWep->setGeometry(QRect(60, 10, 301, 101));
         newWep->setFont(font1);
+        editWep = new QPushButton(centralwidget);
+        editWep->setObjectName(QString::fromUtf8("editWep"));
+        editWep->setGeometry(QRect(410, 10, 301, 101));
+        editWep->setFont(font1);
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
@@ -193,6 +198,7 @@ public:
         statMod->setText(QCoreApplication::translate("MainWindow", "Stat Modifier:", nullptr));
         numberAtk->setText(QCoreApplication::translate("MainWindow", "Number of Attacks:", nullptr));
         newWep->setText(QCoreApplication::translate("MainWindow", "Add new Weapon", nullptr));
+        editWep->setText(QCoreApplication::translate("MainWindow", "Edit Weapons", nullptr));
     } // retranslateUi
 
 };

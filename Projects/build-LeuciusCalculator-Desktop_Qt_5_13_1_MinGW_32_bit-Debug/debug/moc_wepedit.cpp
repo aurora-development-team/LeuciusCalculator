@@ -1,5 +1,5 @@
 /****************************************************************************
-** Meta object code from reading C++ file 'wepsetup.h'
+** Meta object code from reading C++ file 'wepedit.h'
 **
 ** Created by: The Qt Meta Object Compiler version 67 (Qt 5.13.1)
 **
@@ -7,11 +7,11 @@
 *****************************************************************************/
 
 #include <memory>
-#include "../../LeuciusCalculator/wepsetup.h"
+#include "../../LeuciusCalculator/wepedit.h"
 #include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
-#error "The header file 'wepsetup.h' doesn't include <QObject>."
+#error "The header file 'wepedit.h' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 67
 #error "This file was generated using the moc from 5.13.1. It"
 #error "cannot be used with the include files from this version of Qt."
@@ -21,35 +21,34 @@
 QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
-struct qt_meta_stringdata_wepSetup_t {
+struct qt_meta_stringdata_wepEdit_t {
     QByteArrayData data[8];
-    char stringdata0[122];
+    char stringdata0[118];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    qptrdiff(offsetof(qt_meta_stringdata_wepSetup_t, stringdata0) + ofs \
+    qptrdiff(offsetof(qt_meta_stringdata_wepEdit_t, stringdata0) + ofs \
         - idx * sizeof(QByteArrayData)) \
     )
-static const qt_meta_stringdata_wepSetup_t qt_meta_stringdata_wepSetup = {
+static const qt_meta_stringdata_wepEdit_t qt_meta_stringdata_wepEdit = {
     {
-QT_MOC_LITERAL(0, 0, 8), // "wepSetup"
-QT_MOC_LITERAL(1, 9, 17), // "on_cancel_clicked"
-QT_MOC_LITERAL(2, 27, 0), // ""
-QT_MOC_LITERAL(3, 28, 26), // "on_wepName_editingFinished"
-QT_MOC_LITERAL(4, 55, 20), // "on_addDamage_clicked"
-QT_MOC_LITERAL(5, 76, 21), // "on_bonus_valueChanged"
-QT_MOC_LITERAL(6, 98, 4), // "arg1"
-QT_MOC_LITERAL(7, 103, 18) // "on_confirm_clicked"
+QT_MOC_LITERAL(0, 0, 7), // "wepEdit"
+QT_MOC_LITERAL(1, 8, 22), // "on_weaponbox_activated"
+QT_MOC_LITERAL(2, 31, 0), // ""
+QT_MOC_LITERAL(3, 32, 5), // "index"
+QT_MOC_LITERAL(4, 38, 15), // "on_DD_activated"
+QT_MOC_LITERAL(5, 54, 21), // "on_editDamage_clicked"
+QT_MOC_LITERAL(6, 76, 23), // "on_editDamage_2_clicked"
+QT_MOC_LITERAL(7, 100, 17) // "on_delWep_clicked"
 
     },
-    "wepSetup\0on_cancel_clicked\0\0"
-    "on_wepName_editingFinished\0"
-    "on_addDamage_clicked\0on_bonus_valueChanged\0"
-    "arg1\0on_confirm_clicked"
+    "wepEdit\0on_weaponbox_activated\0\0index\0"
+    "on_DD_activated\0on_editDamage_clicked\0"
+    "on_editDamage_2_clicked\0on_delWep_clicked"
 };
 #undef QT_MOC_LITERAL
 
-static const uint qt_meta_data_wepSetup[] = {
+static const uint qt_meta_data_wepEdit[] = {
 
  // content:
        8,       // revision
@@ -63,62 +62,62 @@ static const uint qt_meta_data_wepSetup[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    0,   39,    2, 0x08 /* Private */,
-       3,    0,   40,    2, 0x08 /* Private */,
-       4,    0,   41,    2, 0x08 /* Private */,
-       5,    1,   42,    2, 0x08 /* Private */,
-       7,    0,   45,    2, 0x08 /* Private */,
+       1,    1,   39,    2, 0x08 /* Private */,
+       4,    1,   42,    2, 0x08 /* Private */,
+       5,    0,   45,    2, 0x08 /* Private */,
+       6,    0,   46,    2, 0x08 /* Private */,
+       7,    0,   47,    2, 0x08 /* Private */,
 
  // slots: parameters
+    QMetaType::Void, QMetaType::Int,    3,
+    QMetaType::Void, QMetaType::Int,    3,
     QMetaType::Void,
     QMetaType::Void,
-    QMetaType::Void,
-    QMetaType::Void, QMetaType::Int,    6,
     QMetaType::Void,
 
        0        // eod
 };
 
-void wepSetup::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
+void wepEdit::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
     if (_c == QMetaObject::InvokeMetaMethod) {
-        auto *_t = static_cast<wepSetup *>(_o);
+        auto *_t = static_cast<wepEdit *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
-        case 0: _t->on_cancel_clicked(); break;
-        case 1: _t->on_wepName_editingFinished(); break;
-        case 2: _t->on_addDamage_clicked(); break;
-        case 3: _t->on_bonus_valueChanged((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 4: _t->on_confirm_clicked(); break;
+        case 0: _t->on_weaponbox_activated((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 1: _t->on_DD_activated((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 2: _t->on_editDamage_clicked(); break;
+        case 3: _t->on_editDamage_2_clicked(); break;
+        case 4: _t->on_delWep_clicked(); break;
         default: ;
         }
     }
 }
 
-QT_INIT_METAOBJECT const QMetaObject wepSetup::staticMetaObject = { {
+QT_INIT_METAOBJECT const QMetaObject wepEdit::staticMetaObject = { {
     &QWidget::staticMetaObject,
-    qt_meta_stringdata_wepSetup.data,
-    qt_meta_data_wepSetup,
+    qt_meta_stringdata_wepEdit.data,
+    qt_meta_data_wepEdit,
     qt_static_metacall,
     nullptr,
     nullptr
 } };
 
 
-const QMetaObject *wepSetup::metaObject() const
+const QMetaObject *wepEdit::metaObject() const
 {
     return QObject::d_ptr->metaObject ? QObject::d_ptr->dynamicMetaObject() : &staticMetaObject;
 }
 
-void *wepSetup::qt_metacast(const char *_clname)
+void *wepEdit::qt_metacast(const char *_clname)
 {
     if (!_clname) return nullptr;
-    if (!strcmp(_clname, qt_meta_stringdata_wepSetup.stringdata0))
+    if (!strcmp(_clname, qt_meta_stringdata_wepEdit.stringdata0))
         return static_cast<void*>(this);
     return QWidget::qt_metacast(_clname);
 }
 
-int wepSetup::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+int wepEdit::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
     _id = QWidget::qt_metacall(_c, _id, _a);
     if (_id < 0)

@@ -5,6 +5,7 @@
 #include "Weapon.h"
 #include "functions.h"
 #include "wepsetup.h"
+#include "wepedit.h"
 #include <ctime>
 
 
@@ -38,6 +39,11 @@ private slots:
     void on_numAtkVal_valueChanged(int arg1);
 
     void on_newWep_clicked();
+
+
+    void on_weaponBox_highlighted(int index);
+
+    void on_editWep_clicked();
 
 private:
     Ui::MainWindow *ui;
