@@ -11,7 +11,7 @@ int profBonus = 0;
 int statMod = 0;
 std::string fileName = "weaponFile.txt";
 std::vector <Weapon> weaponList;
-bool isOK;
+bool isOK = true, reload = true;
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -94,6 +94,20 @@ void MainWindow::on_weaponBox_highlighted(int index)
         }
         isOK = true;
     }
+    if(reload == false)
+    {
+        reload = true;
+        ui->weaponBox->clear();
+        weaponList.clear();
+        weaponList.resize(0);
+        readFile(fileName, &weaponList);
+        for(int i = 0;i < weaponList.size();i++)
+        {
+            ui->weaponBox->addItem(QString::fromStdString(weaponList[i].getName()));
+        }
+        ui->weaponBox->setCurrentIndex(-1);
+    }
+
 }
 
 void MainWindow::on_editWep_clicked()
@@ -101,5 +115,5 @@ void MainWindow::on_editWep_clicked()
     wepEdit *set = new wepEdit;
     set->setAttribute(Qt::WA_DeleteOnClose);
     set->show();
-    isOK = false;
+    reload = false;
 }

@@ -94,3 +94,19 @@ void wepEdit::on_delWep_clicked()
     }
 
 }
+
+void wepEdit::on_confirm_clicked()
+{
+    std::fstream file;
+    file.open(fileName, std::fstream::out);
+    for(int i = 0;i < weaponList.size();i++)
+    {
+       file <<  weaponList[i].getName() + ";" + weaponList[i].printDanos()+ ";+" + QString::number(weaponList[i].getBonus()).toStdString() << std::endl;
+    }
+    file.close();
+    this->close();
+
+
+
+
+}

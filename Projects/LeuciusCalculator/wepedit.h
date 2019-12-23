@@ -28,6 +28,8 @@ private slots:
 
     void on_delWep_clicked();
 
+    void on_confirm_clicked();
+
 private:
     Ui::wepEdit *ui;
 };
